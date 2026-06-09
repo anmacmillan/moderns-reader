@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111318">
+  <title>Moderns Reader</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+  <header>
+    <button id="library-btn" hidden>← Library</button>
+    <div><strong id="title">Moderns Reader</strong><small id="subtitle">A private offline library</small></div>
+    <span id="offline">Preparing offline…</span>
+    <button id="settings-btn">Aa</button>
+  </header>
+  <main>
+    <section id="library">
+      <div class="hero"><h1>Your books, without the shop.</h1><p>Import DRM-free EPUB files. Books remain on this device and work offline.</p><label class="import">Import EPUB<input id="file" type="file" accept=".epub" multiple hidden></label></div>
+      <div id="books" class="grid"></div>
+    </section>
+    <section id="reader" hidden>
+      <article id="content"></article>
+      <footer><button id="prev">←</button><span id="progress"></span><button id="next">→</button></footer>
+    </section>
+  </main>
+  <dialog id="settings"><h2>Reading</h2><label>Font size <input id="font-size" type="range" min="15" max="30" value="20"></label><label>Line height <input id="line-height" type="range" min="14" max="22" value="17"></label><button id="theme">Toggle theme</button><button id="close-settings">Close</button></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
