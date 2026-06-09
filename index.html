@@ -15,6 +15,7 @@
     <button id="library-btn" hidden>← Library</button>
     <div><strong id="title">Moderns Reader</strong><small id="subtitle">A private offline library</small></div>
     <span id="offline">Preparing offline…</span>
+    <button id="vocab-btn">Words <span id="vocab-count">0</span></button>
     <button id="settings-btn">Aa</button>
   </header>
   <main>
@@ -28,6 +29,11 @@
     </section>
   </main>
   <dialog id="settings"><h2>Reading</h2><label>Font size <input id="font-size" type="range" min="15" max="30" value="20"></label><label>Line height <input id="line-height" type="range" min="14" max="22" value="17"></label><button id="theme">Toggle theme</button><button id="close-settings">Close</button></dialog>
+  <dialog id="lookup"><h2 id="lookup-word"></h2><p id="lookup-meaning"></p><button id="save-word">Save word</button><button id="close-lookup">Close</button></dialog>
+  <dialog id="vocabulary"><h2>Saved words</h2><div id="vocab-list"></div><button id="close-vocab">Close</button></dialog>
+  <script src="dictionaries/fr-en.js"></script>
+  <script src="dictionaries/it-en.js"></script>
   <script src="app.js"></script>
+  <script src="lookup.js"></script>
 </body>
 </html>
